@@ -10,9 +10,12 @@ import { useEffect } from 'react';
 
 function Footer() {
   const mainController = useAnimation();
-  const [inViewRef, inView] = useInView({ triggerOnce: false });
+  const [inViewRef, inView] = useInView({ triggerOnce: true });
+  const mainController2 = useAnimation();
+  const [inViewRef2, inView2] = useInView({ triggerOnce: true });
   useEffect(() => {
     if (inView) mainController.start('visible');
+    if (inView2) mainController2.start('visible');
   }, [mainController, inView]);
   return (
     <footer className="min-h-[550px] bg-darkBlue pb-[30px] pt-[150px]">
@@ -21,13 +24,22 @@ function Footer() {
           variants={{ hidden: { opacity: 0 }, visible: { opacity: 1 } }}
           initial="hidden"
           animate={mainController}
-          ref={inViewRef}
-          transition={{ duration: 1, delay: 0.2 }}
-          className=" flex w-full flex-col items-start gap-10 px-16 max-sm:px-0"
+          transition={{ duration: 1 }}
+          className=" flex w-full flex-col items-start gap-10 px-16 max-lg:items-center max-sm:px-0"
         >
-          <img src={logo} alt="Fylo" width={170} height={150} loading="lazy" />
-          <div className=" flex w-full items-start justify-between gap-5 max-lg:flex-wrap max-sm:flex-col max-sm:justify-start">
-            <ul className="flex items-start justify-start gap-4">
+          <img
+            src={logo}
+            alt="Fylo"
+            width={170}
+            height={150}
+            loading="lazy"
+            className="max-sm:pl-4 max-min:pl-0"
+          />
+          <div
+            ref={inViewRef}
+            className=" flex w-full items-start justify-between gap-5 max-lg:flex-wrap max-sm:w-[300px] max-sm:flex-col max-sm:justify-start"
+          >
+            <ul className="flex items-start justify-start gap-4 max-sm:pl-4 max-min:pl-0">
               <li>
                 <img
                   src={location}
@@ -41,7 +53,7 @@ function Footer() {
                 eiusmod tempor incididunt ut labore et dolore magna aliqua
               </li>
             </ul>
-            <ul className="flex flex-col justify-start gap-5">
+            <ul className="flex flex-col justify-start gap-5 max-sm:pl-4 max-min:pl-0">
               {footerInfo.map((link, index) => (
                 <li key={index} className="line flex items-center gap-3">
                   <img
@@ -55,7 +67,7 @@ function Footer() {
               ))}
             </ul>
 
-            <nav className="flex flex-col items-start gap-5">
+            <nav className="flex flex-col items-start gap-5 max-sm:pl-4 max-min:pl-0">
               {footerLink1.map((link, index) => (
                 <a href="#" key={index} className="line">
                   {link}
@@ -63,7 +75,7 @@ function Footer() {
               ))}
             </nav>
 
-            <nav className="flex flex-col items-start gap-5">
+            <nav className="flex flex-col items-start gap-5 max-sm:pl-4 max-min:pl-0">
               {footerLink2.map((link, index) => (
                 <a href="#" key={index} className="line">
                   {link}
@@ -71,7 +83,7 @@ function Footer() {
               ))}
             </nav>
 
-            <ul className="flex items-center justify-center gap-4 max-lg:w-full">
+            <ul className="flex items-center justify-center gap-4 max-lg:w-full max-sm:pl-4 max-min:pl-0">
               <li>
                 <img
                   src={facebook}
@@ -107,9 +119,9 @@ function Footer() {
         variants={{ hidden: { opacity: 0 }, visible: { opacity: 1 } }}
         initial="hidden"
         animate={mainController}
-        ref={inViewRef}
+        ref={inViewRef2}
         transition={{ duration: 1, delay: 1 }}
-        className="text-center text-[14px] max-min:text-[11px]"
+        className="text-center text-[14px] max-sm:text-[11px]"
       >
         Challenge by{' '}
         <a

@@ -5,7 +5,7 @@ export default {
   theme: {
     extend: {
       screens: {
-        min: '400px',
+        min: '444px',
       },
       colors: {
         cyan: 'var(--cyan)',
