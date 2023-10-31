@@ -23,7 +23,7 @@ function Footer() {
           animate={mainController}
           ref={inViewRef}
           transition={{ duration: 1, delay: 0.2 }}
-          className=" flex w-full flex-col items-start gap-10 px-16 max-sm:px-0  max-min:px-0"
+          className=" flex w-full flex-col items-start gap-10 px-16 max-sm:px-0"
         >
           <img src={logo} alt="Fylo" width={170} height={150} loading="lazy" />
           <div className=" flex w-full items-start justify-between gap-5 max-lg:flex-wrap max-sm:flex-col max-sm:justify-start">
