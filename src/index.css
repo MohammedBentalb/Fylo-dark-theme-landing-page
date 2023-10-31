@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Raleway:wght@400;700&display=swap');
+@tailwind components;
+@tailwind base;
+@tailwind utilities;
+
+@layer utilities {
+  :root {
+    --font-sans: 'Open Sans', sans-serif;
+    --font-raleway: 'Raleway', sans-serif;
+    --mainBg: hsl(218, 28%, 13%);
+    --signBg: hsl(217, 28%, 15%);
+    --footer: hsl(216, 53%, 9%);
+    --testimonial: hsl(219, 30%, 18%);
+    --cyan: hsl(176, 68%, 64%);
+    --blue: hsl(216, 53%, 9%);
+    --darkblue: hsl(219, 30%, 18%);
+  }
+
+  ::-webkit-scrollbar {
+    width: 16px;
+  }
+  ::-webkit-scrollbar-thumb {
+    transition: all 1s ease-in-out;
+    background: linear-gradient(120deg, var(--darkblue), hsl(197, 53%, 47%));
+    border-radius: 50px;
+    border: 3px solid hsl(214, 30%, 5%);
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: hsl(177, 53%, 50%);
+  }
+  ::-webkit-scrollbar-track {
+    background-color: hsl(214, 30%, 5%);
+    margin-block: 5px;
+    border-radius: 16px;
+  }
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    scroll-behavior: smooth;
+    list-style: none;
+  }
+
+  body {
+    @apply bg-mainBg min-w-[320px] text-white;
+  }
+
+  .max-content {
+    margin: 0 auto;
+    max-width: 1440px;
+  }
+  .link::after,
+  .link::before {
+    transition: all 300ms ease-in-out;
+    @apply content-[''] h-[2%] w-[0] rounded-[50%] bg-white absolute bottom-0;
+    /* content: '';
+    height: 2%;
+    width: 0%;
+    border-radius: 50%;
+    background: #fff;
+    position: absolute;
+    bottom: 0; */
+  }
+  .link::after {
+    right: 50%;
+  }
+  .link::before {
+    left: 50%;
+  }
+  .link:hover::before,
+  .link:hover::after {
+    width: 50%;
+  }
+  .title {
+    font-size: clamp(1.08rem, 3vw, 2.5rem);
+  }
+  .desc {
+    font-size: clamp(0.9rem, 2vw, 1.3rem);
+  }
+  .anchor {
+    font-size: clamp(0.85rem, 1vw, 1rem);
+  }
+  .button {
+    transition: background 0.3s ease-in-out;
+    background: linear-gradient(135deg, var(--cyan) 65%, var(--blue));
+    @apply shadow-md rounded-full px-24 max-[400px]:px-16 py-4 font-semibold  text-white;
+  }
+  .button:hover {
+    background: linear-gradient(160deg, var(--cyan), var(--cyan));
+    scale: 1.05;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .wave {
+    @apply absolute w-screen -bottom-0 left-0 right-0 z-10 max-h-[400px];
+  }
+
+  @media (max-width: 400px) {
+    body {
+      overflow-x: hidden;
+    }
+  }
+  .card:nth-child(2) img {
+    width: 60px;
+    scale: 1.2;
+  }
+  .sub-title {
+    font-size: clamp(1.5rem, 3vw, 2.5rem);
+  }
+  .desc-pro {
+    font-size: clamp(0.9rem, 1vw, 1rem);
+    @apply w-[90%] max-sm:w-[350px] max-[400px]:w-[300px];
+  }
+  .testimonial > *:first-child::after {
+    content: url('assets/images/bg-quotes.png');
+    transform: translate(-15%, -60%);
+    @apply absolute top-0 left-0;
+  }
+  .email-btn {
+    background: linear-gradient(135deg, var(--cyan) 65%, var(--blue));
+    transition: background transform 1s ease-in-out;
+    @apply px-16 py-4 rounded-full cursor-pointer;
+  }
+  .email-btn:hover {
+    background: linear-gradient(135deg, var(--cyan) 65%, var(--cyan));
+  }
+  .email-btn:focus {
+    scale: 0.95;
+  }
+  .email {
+    @apply absolute bottom-0 translate-y-[50%];
+  }
+  .line {
+    @apply relative;
+  }
+  .line::after,
+  .line::before {
+    transition: all 0.3s ease-in-out;
+    @apply content-[''] w-[0] h-[2%] rounded-full border-0 border-white bg-white absolute -bottom-[2px] cursor-pointer;
+  }
+  .line::after {
+    @apply left-[50%];
+  }
+  .line::before {
+    @apply right-[49%];
+  }
+  .line > img {
+    @apply w-[20px] h-[18px];
+  }
+  .line:hover::after,
+  .line:hover::before {
+    @apply w-[50%];
+  }
+  .filter-icon {
+    transition: all 0.3s ease-in-out;
+    filter: invert(96%) sepia(0%) saturate(17%) hue-rotate(0deg)
+      brightness(104%) contrast(107%);
+  }
+  .filter-icon:hove {
+    filter: invert(69%) sepia(90%) saturate(251%) hue-rotate(123deg)
+      brightness(102%) contrast(82%);
+    width: 90px;
+  }
+}
