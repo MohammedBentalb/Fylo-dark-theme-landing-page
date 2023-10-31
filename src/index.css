@@ -18,6 +18,8 @@
 
   ::-webkit-scrollbar {
     width: 16px;
+    position: absolute;
+    @apply max-min:w-0;
   }
   ::-webkit-scrollbar-thumb {
     transition: all 1s ease-in-out;
@@ -96,11 +98,6 @@
     @apply absolute w-screen -bottom-0 left-0 right-0 z-10 max-h-[400px];
   }
 
-  @media (max-width: 400px) {
-    body {
-      overflow-x: hidden;
-    }
-  }
   .card:nth-child(2) img {
     width: 60px;
     scale: 1.2;
