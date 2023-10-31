@@ -36,7 +36,7 @@ function Footer() {
                   alt="Fylo location"
                 />
               </li>
-              <li className="w-[30ch] text-[15px] max-min:w-[250px]">
+              <li className="w-[30ch] text-[15px] max-sm:w-[250px]">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua
               </li>
