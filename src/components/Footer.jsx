@@ -16,7 +16,7 @@ function Footer() {
   useEffect(() => {
     if (inView) mainController.start('visible');
     if (inView2) mainController2.start('visible');
-  }, [mainController, inView]);
+  }, [mainController, inView, inView2, mainController2]);
   return (
     <footer className="min-h-[550px] bg-darkBlue pb-[30px] pt-[150px]">
       <section className="max-content flex flex-col items-start py-10 max-lg:mt-[50px] max-min:w-[300px]">
