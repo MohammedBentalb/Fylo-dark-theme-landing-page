@@ -95,7 +95,7 @@
   }
 
   .wave {
-    @apply absolute w-screen -bottom-0 left-0 right-0 z-10 max-h-[400px];
+    @apply absolute w-screen -bottom-0 left-0 right-0 z-10 max-h-[400px]  max-[350px]:w-full;
   }
   footer > * {
     overflow-x: hidden;
