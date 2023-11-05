@@ -20,9 +20,9 @@ function Testimonial({ data }) {
       transition={{ duration: 0.5 }}
       animate={mainController}
       ref={inViewRef}
-      className=" relative flex w-[350px] flex-col items-center justify-center gap-5 rounded-sm bg-testimonial py-8  max-min:w-[300px] max-min:py-6"
+      className=" relative flex w-[350px] flex-col items-center justify-center gap-5 rounded-sm bg-testimonial py-8  max-min:w-[300px] max-min:py-6 max-ssm:w-[95%] "
     >
-      <p className="w-[36ch] text-[14px] max-min:w-[35ch]">
+      <p className="w-[36ch] text-[14px] max-min:w-[35ch] max-ssm:w-[95%] max-ssm:text-[13px]">
         {data.message}
       </p>
       <div className="flex w-[81%]  items-center gap-3 max-min:w-[91%]">

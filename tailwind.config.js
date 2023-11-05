@@ -6,6 +6,7 @@ export default {
     extend: {
       screens: {
         min: '444px',
+        ssm: '319px',
       },
       colors: {
         cyan: 'var(--cyan)',

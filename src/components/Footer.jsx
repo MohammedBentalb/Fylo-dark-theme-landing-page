@@ -19,7 +19,7 @@ function Footer() {
   }, [mainController, inView, inView2, mainController2]);
   return (
     <footer className="min-h-[550px] bg-darkBlue pb-[30px] pt-[150px]">
-      <section className="max-content flex flex-col items-start py-10 max-lg:mt-[50px] max-min:w-[300px]">
+      <section className="max-content flex flex-col items-start py-10 max-lg:mt-[50px] max-min:w-[300px] max-ssm:w-full">
         <motion.div
           variants={{ hidden: { opacity: 0 }, visible: { opacity: 1 } }}
           initial="hidden"
@@ -37,7 +37,7 @@ function Footer() {
           />
           <div
             ref={inViewRef}
-            className=" flex w-full items-start justify-between gap-5 max-lg:flex-wrap max-sm:w-[300px] max-sm:flex-col max-sm:justify-start"
+            className=" flex w-full items-start justify-between gap-5 max-lg:flex-wrap max-sm:w-[300px] max-sm:flex-col max-sm:justify-start max-ssm:w-[95%]"
           >
             <ul className="flex items-start justify-start gap-4 max-sm:pl-4 max-min:pl-0">
               <li>

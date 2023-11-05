@@ -22,9 +22,11 @@ function Contact() {
       ref={inViewRef}
       className=" max-content relative flex items-center justify-center py-24"
     >
-      <div className="email flex max-w-[900px] flex-col items-center justify-center gap-6 rounded-lg bg-signBg px-4 py-10 shadow-xl max-lg:w-[80%] max-min:w-[300px] max-min:gap-3">
-        <h1 className="sub-title font-semibold">Get early access today</h1>
-        <p className="w-[70%] text-center text-[15px] max-sm:w-[90%] max-min:text-[14px]">
+      <div className="email flex max-w-[900px] flex-col items-center justify-center gap-6 rounded-lg bg-signBg px-4 py-10 shadow-xl max-lg:w-[80%] max-min:w-[300px] max-min:gap-3 max-ssm:w-full">
+        <h1 className="sub-title font-semibold max-ssm:text-[22px]">
+          Get early access today
+        </h1>
+        <p className="w-[70%] text-center text-[15px] max-sm:w-[90%] max-min:text-[14px] max-ssm:w-full">
           It only takes a minute to sign up and our free starter tier is
           extremely generous. If you have any questions, our support team would
           be happy to help you.
@@ -38,7 +40,7 @@ function Contact() {
             name="email"
             id="email"
             required
-            className="h-[50px] w-[500px] min-w-[270px] rounded-full p-2 max-lg:w-min max-sm:h-[40px] max-sm:w-[90%]"
+            className="h-[50px] w-[500px] min-w-[270px] rounded-full px-4 py-2 max-lg:w-min max-sm:h-[40px] max-sm:w-[90%]"
             placeholder="example@Fylo.com"
           />
           <input

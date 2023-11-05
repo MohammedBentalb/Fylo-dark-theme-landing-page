@@ -27,7 +27,7 @@ function HeroSection() {
           }}
           initial="hidden"
           animate="visible"
-          className="title w-[30ch] text-center font-raleway text-[42px] font-bold text-white"
+          className="title w-[30ch] text-center font-raleway text-[42px] font-bold text-white max-ssm:w-full max-ssm:text-[16px]"
         >
           All your files in one secure location, accessible anywhere.
         </motion.h1>
@@ -38,7 +38,7 @@ function HeroSection() {
           }}
           initial="hidden"
           animate="visible"
-          className="desc w-[54ch] text-center text-white max-min:w-[290px]"
+          className="desc w-[54ch] text-center text-white max-min:w-[290px] max-ssm:w-full max-ssm:text-[12px]"
         >
           Fylo stores all your most important files in one secure location.
           Access them wherever you need, share and collaborate with friends

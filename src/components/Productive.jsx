@@ -45,17 +45,17 @@ function Productive() {
         initial="hidden"
         transition={{ duration: 0.5, delay: 0.5 }}
         animate={mainController2}
-        className="flex max-w-[600px] flex-col items-start gap-4 sm:w-fit"
+        className="flex max-w-[600px] flex-col items-start gap-4 max-ssm:w-full max-ssm:pl-2 sm:w-fit"
       >
         <h1 className="sub-title font-semibold leading-tight">
           Stay productive,
           <br /> wherever you are
         </h1>
-        <p className="desc-pro">
+        <p className="desc-pro max-ssm:w-[98%] max-ssm:text-[12px]">
           Never let location be an issue when accessing your files. Fylo has you
           covered for all of your file storage needs.
         </p>
-        <p className="desc-pro">
+        <p className="desc-pro max-ssm:w-[98%] max-ssm:text-[12px]">
           Securely share files and folders with friends, family and colleagues
           for live collaboration. No email attachments required.
         </p>

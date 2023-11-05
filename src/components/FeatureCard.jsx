@@ -19,7 +19,7 @@ function FeatureCard({ feat, index }) {
       initial="hidden"
       animate={mainController}
       ref={inViewRef}
-      className="card  m-5 flex h-[250px] w-[350px] flex-col items-center justify-center gap-2 max-min:mx-0 max-min:w-[300px] "
+      className="card  m-5 flex h-[250px] w-[350px] flex-col items-center justify-center gap-2 max-min:mx-0 max-min:w-[300px] max-ssm:w-full "
     >
       <img
         src={feat.img}
@@ -29,10 +29,10 @@ function FeatureCard({ feat, index }) {
         width={80}
         height={80}
       />
-      <h2 className=" text-[20px] font-semibold leading-8 text-white">
+      <h2 className=" text-[20px] font-semibold leading-8 text-white max-ssm:w-full max-ssm:text-center max-ssm:text-[17px]">
         {feat.title}
       </h2>
-      <p className="w-[360px]  text-center text-[14px] text-white max-min:w-[300px]">
+      <p className="w-[360px]  text-center text-[14px] text-white max-min:w-[300px] max-ssm:w-[98%] max-ssm:text-[12px]">
         {feat.desc}
       </p>
     </motion.div>

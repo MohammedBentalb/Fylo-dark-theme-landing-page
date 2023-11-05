@@ -14,8 +14,23 @@
     --cyan: hsl(176, 68%, 64%);
     --blue: hsl(216, 53%, 9%);
     --darkblue: hsl(219, 30%, 18%);
+    color: white;
   }
 
+  *,
+  *::after,
+  *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    scroll-behavior: smooth;
+    list-style: none;
+  }
+
+  body {
+    background-color: var(--mainBg);
+  }
   ::-webkit-scrollbar {
     width: 16px;
     position: absolute;
@@ -34,18 +49,6 @@
     background-color: hsl(214, 30%, 5%);
     margin-block: 5px;
     border-radius: 16px;
-  }
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Open Sans', sans-serif;
-    scroll-behavior: smooth;
-    list-style: none;
-  }
-
-  body {
-    @apply bg-mainBg min-w-[320px] text-white;
   }
 
   .max-content {
@@ -112,7 +115,7 @@
     @apply w-[90%] max-sm:w-[350px] max-[400px]:w-[300px];
   }
   .testimonial > *:first-child::after {
-    content: url('assets/images/bg-quotes.png');
+    content: url('assets/images/bg-quotes.png'); 
     transform: translate(-15%, -60%);
     @apply absolute top-0 left-0;
   }
