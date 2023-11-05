@@ -23,4 +23,6 @@ Your users should be able to:
 
 # Coded by Mohammed Bentalb
 ## Preview : 
-https://mohammedbentalb.github.io/Fylo-dark-theme-landing-page/
+- https://mohammedbentalb.github.io/Fylo-dark-theme-landing-page/
+## PageSpeed Insights :
+- https://pagespeed.web.dev/analysis/https-mohammedbentalb-github-io-Fylo-dark-theme-landing-page/u3foqx5ljc?form_factor=desktop
